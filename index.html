@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicons/favicon-16x16.png">
+    <link rel="manifest" href="./Favicons/site.webmanifest">
+    <title>Gasolina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="inbox">
+                <h1>Pesquisa</h1>
+                <p>Preços da gasolina, em seus respectivos anos e estados, no Brasil nos últimos 6 anos.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="ano">Ano</label>
+                        <select type="select" class="form-control" id="ano" name="Ano">
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022" selected>2022</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <select type="select" class="form-control" id="estado" name="Estado">
+                            <option value="AC"selected>Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF" >Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="inbox">
+                <div id="yearTitle"></div>
+                <div id="canvas"></div>   
+            </div>
+            <div class="inbox">
+                <canvas id="myChartYears" height="150" width="400"></canvas>
+            </div>
+            <div class="inbox">
+                <h1 id="monthTitle"></h1>
+                <div id="meses"></div>
+            </div>
+            <div class="inbox">
+            </div>
+            <div class="inbox">
+                <h1>Aumento do preço da Gasolina.</h1>
+                <div id="porcentagem">
+                </div>
+            </div>
+        </div>        
+    </main>
+    <script type="module" src="./scripts/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

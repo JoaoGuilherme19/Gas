@@ -1,0 +1,1044 @@
+{
+    "type": "module",
+    
+    "AvrgGas":[
+        {
+            "year": "2017",
+            "price":3.77,
+            "months": [
+                {
+                    "month": "Jan",
+                    "price": "3.77"
+                },
+                {
+                    "month": "Feb",
+                    "price": "3.76"
+                },
+                {
+                    "month": "Mar",
+                    "price": "3.69"
+                },
+                {
+                    "month": "Apr",
+                    "price": "3.64"
+                },
+                {
+                    "month": "May",
+                    "price": "3.62"
+                },
+                {
+                    "month": "Jun",
+                    "price": "3.55"
+                },
+                {
+                    "month": "Jul",
+                    "price": "3.55"
+                },
+                {
+                    "month": "Aug",
+                    "price": "3.78"
+                },
+                {
+                    "month": "Sep",
+                    "price": "3.88"
+                },
+                {
+                    "month": "Oct",
+                    "price": "3.90"
+                },
+                {
+                    "month": "Nov",
+                    "price": "4.00"
+                },
+                {
+                    "month": "Dec",
+                    "price": "4.09"
+                }
+            ]
+        },
+        {
+            "year": "2018",
+            "price":4.41,
+            "months": [
+                {
+                    "month": "Jan",
+                    "price": "4.19"
+                },
+                {
+                    "month": "Feb",
+                    "price": "4.21"
+                },
+                {
+                    "month": "Mar",
+                    "price": "4.20"
+                },
+                {
+                    "month": "Apr",
+                    "price": "4.22"
+                },
+                {
+                    "month": "May",
+                    "price": "4.31"
+                },
+                {
+                    "month": "Jun",
+                    "price": "4.55"
+                },
+                {
+                    "month": "Jul",
+                    "price": "4.49"
+                },
+                {
+                    "month": "Aug",
+                    "price": "4.45"
+                },
+                {
+                    "month": "Sep",
+                    "price": "4.63"
+                },
+                {
+                    "month": "Oct",
+                    "price": "4.72"
+                },
+                {
+                    "month": "Nov",
+                    "price": "4.59"
+                },
+                {
+                    "month": "Dec",
+                    "price": "4.37"
+                }
+            ]
+        },
+        {
+            "year": "2019",
+            "price":4.38,
+            "months": [
+                {
+                    "month": "Jan",
+                    "price": "4.27"
+                },
+                {
+                    "month": "Feb",
+                    "price": "4.19"
+                },
+                {
+                    "month": "Mar",
+                    "price": "4.31"
+                },
+                {
+                    "month": "Apr",
+                    "price": "4.44"
+                },
+                {
+                    "month": "May",
+                    "price": "4.55"
+                },
+                {
+                    "month": "Jun",
+                    "price": "4.47"
+                },
+                {
+                    "month": "Jul",
+                    "price": "4.35"
+                },
+                {
+                    "month": "Aug",
+                    "price": "4.32"
+                },
+                {
+                    "month": "Sep",
+                    "price": "4.33"
+                },
+                {
+                    "month": "Oct",
+                    "price": "4.38"
+                },
+                {
+                    "month": "Nov",
+                    "price": "4.41"
+                },
+                {
+                    "month": "Dec",
+                    "price": "4.53"
+                }
+            ]
+        },
+        {
+            "year": "2020",
+            "price":4.28,
+            "months": [
+                {
+                    "month": "Jan",
+                    "price": "4.58"
+                },
+                {
+                    "month": "Feb",
+                    "price": "4.55"
+                },
+                {
+                    "month": "Mar",
+                    "price": "4.46"
+                },
+                {
+                    "month": "Apr",
+                    "price": "4.07"
+                },
+                {
+                    "month": "May",
+                    "price": "3.82"
+                },
+                {
+                    "month": "Jun",
+                    "price": "3.96"
+                },
+                {
+                    "month": "Jul",
+                    "price": "4.14"
+                },
+                {
+                    "month": "Aug",
+                    "price": "4.24"
+                },
+                {
+                    "month": "Sep",
+                    "price": "4.30"
+                },
+                {
+                    "month": "Oct",
+                    "price": "4.36"
+                },
+                {
+                    "month": "Nov",
+                    "price": "4.41"
+                },
+                {
+                    "month": "Dec",
+                    "price": "4.48"
+                }
+            ]
+        },
+        {
+            "year": "2021",
+            "price":5.78,
+            "months": [
+                {
+                    "month": "Jan",
+                    "price": "4.62"
+                },
+                {
+                    "month": "Feb",
+                    "price": "4.95"
+                },
+                {
+                    "month": "Mar",
+                    "price": "5.48"
+                },
+                {
+                    "month": "Apr",
+                    "price": "5.45"
+                },
+                {
+                    "month": "May",
+                    "price": "5.60"
+                },
+                {
+                    "month": "Jun",
+                    "price": "5.69"
+                },
+                {
+                    "month": "Jul",
+                    "price": "5.81"
+                },
+                {
+                    "month": "Aug",
+                    "price": "5.93"
+                },
+                {
+                    "month": "Sep",
+                    "price": "6.08"
+                },
+                {
+                    "month": "Oct",
+                    "price": "6.34"
+                },
+                {
+                    "month": "Nov",
+                    "price": "6.74"
+                },
+                {
+                    "month": "Dec",
+                    "price": "6.67"
+                }
+            ]
+        },
+        {
+            "year": "2022",
+            "price":7.11,
+            "months": [
+                {
+                    "month": "Jan",
+                    "price": "6.64"
+                },
+                {
+                    "month": "Feb",
+                    "price": "6.60"
+                },
+                {
+                    "month": "Mar",
+                    "price": "7.01"
+                },
+                {
+                    "month": "Apr",
+                    "price": "7.25"
+                },
+                {
+                    "month": "May",
+                    "price": "7.28"
+                },
+                {
+                    "month": "Jun",
+                    "price": "7.25"
+                },
+                {
+                    "month": "Jul",
+                    "price": "7.21"
+                },
+                {
+                    "month": "Aug",
+                    "price": "7.21"
+                },
+                {
+                    "month": "Sep",
+                    "price": "7.21"
+                },
+                {
+                    "month": "Oct",
+                    "price": "7.21"
+                },
+                {
+                    "month": "Nov",
+                    "price": "7.21"
+                },
+                {
+                    "month": "Dec",
+                    "price": "7.21"
+                }
+            ]
+        }
+    ],
+    "estados":[
+        {
+        "nome": "Acre",
+        "epocas": [{
+            "ano": "2017",
+            "valor": "4.08"
+        },{
+            "ano": "2018",
+            "valor": "5.03"
+        },{
+            "ano": "2019",
+            "valor": "4.89"
+        },{
+            "ano": "2020",
+            "valor": "4.83"
+        },{
+            "ano": "2021",
+            "valor": "6.38"
+        },{
+            "ano": "2022",
+            "valor": "7.64"
+        }]
+    },
+    {
+        "nome": "Alagoas",
+        "epocas": [{
+            "ano": "2017",
+            "valor": "3.73"
+        },{
+            "ano": "2018",
+            "valor": "4.68"
+        },{
+            "ano": "2019",
+            "valor": "4.62"
+        },{
+            "ano": "2020",
+            "valor": "4.34"
+        },{
+            "ano": "2021",
+            "valor": "5.97"
+        },{
+            "ano": "2022",
+            "valor": "7.34"
+        }]
+    },
+    {
+        "nome": "Amapá",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "5,90"
+        },{
+            "ano": "2018",
+            "valor": "4.20"
+        },{
+            "ano": "2019",
+            "valor": "4.30"
+        },{
+            "ano": "2020",
+            "valor": "4.46"
+        },{
+            "ano": "2021",
+            "valor": "5.50"
+        },{
+            "ano": "2022",
+            "valor": "5.90"
+        }]
+    },
+    {
+        "nome": "Amazonas",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,61"
+        },{
+            "ano": "2018",
+            "valor": "4.20"
+        },{
+            "ano": "2019",
+            "valor": "4.30"
+        },{
+            "ano": "2020",
+            "valor": "4.46"
+        },{
+            "ano": "2021",
+            "valor": "5.50"
+        },{
+            "ano": "2022",
+            "valor": "6.61"
+        }]
+    },
+    {
+        "nome": "Bahia",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "7,02"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "7,02"
+        }]
+    },
+    {
+        "nome": "Ceará",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,59"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,59"
+        }]
+    },
+    {
+        "nome": "Distrito Federal",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,88"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,88"
+        }]
+    },
+    {
+        "nome": "Espírito Santo",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,52"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,85"
+        }]
+    },
+    {
+        "nome": "Goiás",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "7,10"
+        }]
+    },
+    {
+        "nome": "Maranhão",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,49"
+        }]
+    },
+    {
+        "nome": "Mato Grosso",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,52"
+        }]
+    },
+    {
+        "nome": "Mato Grosso do Sul",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,47"
+        }]
+    },
+    {
+        "nome": "Minas Gerais",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,96"
+        }]
+    },
+    {
+        "nome": "Pará",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,81"
+        }]
+    },
+    {
+        "nome": "Paraíba",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,49"
+        }]
+    },
+    {
+        "nome": "Paraná",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,40"
+        }]
+    },
+    {
+        "nome": "Pernambuco",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,54"
+        }]
+    },
+    {
+        "nome": "Piauí",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,90"
+        }]
+    },
+    {
+        "nome": "Rio de Janeiro",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "7, 19"
+        }]
+    },
+    {
+        "nome": "Rio Grande do Norte",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "7,09"
+        }]
+    },
+    {
+        "nome": "Rio Grande do Sul",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,48"
+        }]
+    },
+    {
+        "nome": "Rondônia",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,76"
+        }]
+    },
+    {
+        "nome": "Roraima",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,50"
+        }]
+    },
+    {
+        "nome": "Santa Catarina",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,55"
+        }]
+    },
+    {
+        "nome": "São Paulo",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,37"
+        }]
+    },
+    {
+        "nome": "Sergipe",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6,85"
+        },{
+            "ano": "2018",
+            "valor": "4,20"
+        },{
+            "ano": "2019",
+            "valor": "4,30"
+        },{
+            "ano": "2020",
+            "valor": "4,46"
+        },{
+            "ano": "2021",
+            "valor": "5,50"
+        },{
+            "ano": "2022",
+            "valor": "6,52"
+        }]
+    },
+    {
+        "nome": "Tocantins",
+        "epocas":[{
+            "ano": "2017",
+            "valor": "6.85"
+        },{
+            "ano": "2018",
+            "valor": "4.20"
+        },{
+            "ano": "2019",
+            "valor": "4.30"
+        },{
+            "ano": "2020",
+            "valor": "4.46"
+        },{
+            "ano": "2021",
+            "valor": "5.50"
+        },{
+            "ano": "2022",
+            "valor": "6.85"
+        }]
+    }
+    ],
+    "regioes":[
+    {
+        "nome": "Norte",
+        "epocas": [
+        {
+            "ano": "2017",
+            "valor": 3.69
+        },{
+            "ano": "2018",
+            "valor": 4.49
+        },{
+            "ano": "2019",
+            "valor": 4.48
+        },{
+            "ano": "2020",
+            "valor": 4.16
+        },{
+            "ano": "2021",
+            "valor": 5.82
+        },{
+            "ano": "2022",
+            "valor": 7.30
+        }
+    ]
+    },
+    {
+        "nome": "Nordeste",
+        "epocas": [
+        {
+            "ano": "2017",
+            "valor": 3.60
+        },{
+            "ano": "2018",
+            "valor": 4.49
+        },{
+            "ano": "2019",
+            "valor": 4.41
+        },{
+            "ano": "2020",
+            "valor": 4.24
+        },{
+            "ano": "2021",
+            "valor": 5.90
+        },{
+            "ano": "2022",
+            "valor": 7.54
+        }]
+    },
+    {
+        "nome": "Centro-Oeste",
+        "epocas": [
+        {
+            "ano": "2017",
+            "valor": 3.52
+        },{
+            "ano": "2018",
+            "valor": 4.59
+        },{
+            "ano": "2019",
+            "valor": 4.31
+        },{
+            "ano": "2020",
+            "valor": 4.12
+        },{
+            "ano": "2021",
+            "valor": 5.98
+        },{
+            "ano": "2022",
+            "valor": 7.28
+        }]
+    },
+    {
+        "nome": "Sudeste",
+        "epocas": [
+        {
+            "ano": "2017",
+            "valor": 3.75
+        },{
+            "ano": "2018",
+            "valor": 4.49
+        },{
+            "ano": "2019",
+            "valor": 4.35
+        },{
+            "ano": "2020",
+            "valor": 4.11
+        },{
+            "ano": "2021",
+            "valor": 5.74
+        },{
+            "ano": "2022",
+            "valor": 7.16
+        }]
+    },
+    {
+        "nome": "Sul",
+        "epocas": [
+        {
+            "ano": "2017",
+            "valor": 3.52
+        },{
+            "ano": "2018",
+            "valor": 4.42
+        },{
+            "ano": "2019",
+            "valor": 4.23
+        },{
+            "ano": "2020",
+            "valor": 4.08
+        },{
+            "ano": "2021",
+            "valor": 5.71
+        },{
+            "ano": "2022",
+            "valor": 7.05
+        }]
+    }
+    ]
+}
