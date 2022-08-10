@@ -127,57 +127,126 @@ const ALarray = []
 for (let i = 0; i < ALprice.length; i++) {
     ALarray.push(ALprice[i].valor)
 }
-const APprice = myJson.estados[3].epocas
+const APprice = myJson.estados[2].epocas
 const AParray = []
 for (let i = 0; i < APprice.length; i++) {
     AParray.push(APprice[i].valor)
 }
-const AMprice = myJson.estados[2].epocas
+const AMprice = myJson.estados[3].epocas
 const AMarray = []
+for(let i = 0; i < AMprice.length; i++ ) {
+    AMarray.push(AMprice[i].valor)
+}
 const BAprice = myJson.estados[4].epocas
 const BAarray = []
+for(let i = 0; i < BAprice.length; i++ ) {
+    BAarray.push(BAprice[i].valor)
+}
 const CEprice = myJson.estados[5].epocas
 const CEarray = []
+for(let i = 0; i < CEprice.length; i++ ) {
+    CEarray.push(CEprice[i].valor)
+}
 const DFprice = myJson.estados[6].epocas
 const DFarray = []
+for(let i = 0; i < DFprice.length; i++ ) {
+    DFarray.push(DFprice[i].valor)
+}
 const ESprice = myJson.estados[7].epocas
 const ESarray = []
+for(let i =0; i < ESprice.length; i++ ) {
+    ESarray.push(ESprice[i].valor)
+}
 const GOprice = myJson.estados[8].epocas
 const GOarray = []
+for(let i = 0; i < GOprice.length; i++ ) {
+    GOarray.push(GOprice[i].valor)
+}
 const MGprice = myJson.estados[9].epocas
 const MGarray = []
+for(let i = 0; i < MGprice.length; i++ ) {
+    MGarray.push(MGprice[i].valor)
+}
 const MSprice = myJson.estados[10].epocas
 const MSarray = []
+for(let i = 0; i < MSprice.length; i++ ) {
+    MSarray.push(MSprice[i].valor)
+}
 const MTprice = myJson.estados[11].epocas
 const MTarray = []
+for(let i = 0; i < MTprice.length; i++ ) {
+    MTarray.push(MTprice[i].valor)
+}
 const PAprice = myJson.estados[12].epocas
 const PAarray = []
+for(let i = 0; i < PAprice.length; i++ ) {
+    PAarray.push(PAprice[i].valor)
+}
 const MAprice = myJson.estados[13].epocas
 const MAarray = []
+for(let i = 0; i < MAprice.length; i++ ) {
+    MAarray.push(MAprice[i].valor)
+}
 const PBprice = myJson.estados[14].epocas
 const PBarray = []
+for(let i = 0; i < PBprice.length; i++ ) {
+    PBarray.push(PBprice[i].valor)
+}
 const PRprice = myJson.estados[15].epocas
 const PRarray = []
+for(let i = 0; i < PRprice.length; i++ ) {
+    PRarray.push(PRprice[i].valor)
+}
 const PEprice = myJson.estados[16].epocas
 const PEarray = []
+for(let i = 0; i < PEprice.length; i++ ) {
+    PEarray.push(PEprice[i].valor)
+}
 const PIprice = myJson.estados[17].epocas
 const PIarray = []
+for(let i = 0; i < PIprice.length; i++ ) {
+    PIarray.push(PIprice[i].valor)
+}
 const RJprice = myJson.estados[18].epocas
 const RJarray = []
+for(let i = 0; i < RJprice.length; i++ ) {
+    RJarray.push(RJprice[i].valor)
+}
 const RNprice = myJson.estados[19].epocas
 const RNarray = []
+for(let i = 0; i < RNprice.length; i++ ) {
+    RNarray.push(RNprice[i].valor)
+}
 const RSprice = myJson.estados[20].epocas
 const RSarray = []
+for(let i = 0; i < RSprice.length; i++ ) {
+    RSarray.push(RSprice[i].valor)
+}
 const ROprice = myJson.estados[21].epocas
 const ROarray = []
+for(let i = 0; i < ROprice.length; i++ ) {
+    ROarray.push(ROprice[i].valor)
+}
 const RRprice = myJson.estados[22].epocas
 const RRarray = []
+for(let i = 0; i < RRprice.length; i++ ) {
+    RRarray.push(RRprice[i].valor)
+}
 const SCprice = myJson.estados[23].epocas
 const SCarray = []
+for(let i = 0; i < SCprice.length; i++ ) {
+    SCarray.push(SCprice[i].valor)
+}
 const SPprice = myJson.estados[24].epocas
 const SParray = []
+for(let i = 0; i < SPprice.length; i++ ) {
+    SParray.push(SPprice[i].valor)
+}
 const SEprice = myJson.estados[25].epocas
 const SEarray = []
+for(let i = 0; i < SEprice.length; i++ ) {
+    SEarray.push(SEprice[i].valor)
+}
 const TOprice = myJson.estados[26].epocas
 const TOarray = []
 for(let i = 0; i < TOprice.length; i++){
@@ -366,8 +435,9 @@ const labels = [
 
     // GRAFICO DOS ANOS
 
-    // GRAFICO DOS MESES
 
+
+    // GRAFICO DOS MESES
     
     // REGIOES
 
@@ -389,8 +459,8 @@ const labels = [
         type: 'line',
         label: 'Centro-Oeste',
         data: COarray,
-        backgroundColor: 'rgb(50, 200, 50)',
-        borderColor: 'rgb(50, 200, 50)'
+        backgroundColor: 'rgb(50, 100, 50)',
+        borderColor: 'rgb(50, 100, 50)'
     }
     const datasetSE = {
         type: 'line',
@@ -493,8 +563,194 @@ const labels = [
             },datasetNE],
             labels: ['2017', '2018', '2019', '2020', '2021', '2022']
     }
+    const dataCe = {
+        datasets: [{
+            type: 'line',
+            label: 'Ceará',
+            data: CEarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataMa = {
+        datasets: [{
+            type: 'line',
+            label: 'Maranhão',
+            data: MAarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataPe = {
+        datasets: [{
+            type: 'line',
+            label: 'Pernambuco',
+            data: PEarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataPb = {
+        datasets: [{
+            type: 'line',
+            label: 'Paraíba',
+            data: PBarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataPi = {
+        datasets: [{
+            type: 'line',
+            label: 'Piauí',
+            data: PIarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataRn = {
+        datasets: [{
+            type: 'line',
+            label: 'Rio Grande do Norte',
+            data: RNarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataSe = {
+        datasets: [{
+            type: 'line',
+            label: 'Sergipe',
+            data: SEarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
     // NORDESTE AL BA CE MA PB PE PI RN SE
 
+    // CENTRO OESTE
+    const dataDf = {
+        datasets: [{
+            type: 'line',
+            label: 'Distrito Federal',
+            data: DFarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetCO],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataGo = {
+        datasets: [{
+            type: 'line',
+            label: 'Goiás',
+            data: GOarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetCO],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataMt = {
+        datasets: [{
+            type: 'line',
+            label: 'Mato Grosso',
+            data: MTarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetCO],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataMs = {
+        datasets: [{
+            type: 'line',
+            label: 'Mato Grosso do Sul',
+            data: MSarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetCO],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    // CENTRO OESTE GO MT MS DF
+    // SUDESTE
+    const dataEs = {
+        datasets: [{
+            type: 'line',
+            label: 'Espírito Santo',
+            data: ESarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataMg = {
+        datasets: [{
+            type: 'line',
+            label: 'Minas Gerais',
+            data: MGarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataRj = {
+        datasets: [{
+            type: 'line',
+            label: 'Rio de Janeiro',
+            data: RJarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataSp = {
+        datasets: [{
+            type: 'line',
+            label: 'São Paulo',
+            data: SParray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSE],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    // SUDESTE ES MG RJ SP
+    // SUL 
+    const dataSc = {
+        datasets: [{
+            type: 'line',
+            label: 'Santa Catarina',
+            data: SCarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSU],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataPr = {
+        datasets: [{
+            type: 'line',
+            label: 'Paraná',
+            data: PRarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSU],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    const dataRs = {
+        datasets: [{
+            type: 'line',
+            label: 'Rio Grande do Sul',
+            data: RSarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetSU],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    }
+    // SUL SC PR RS
 
     const myChartsMonths = (data) => {
         meses.innerHTML = `<canvas id="myChartsMonths" height="150" width="400"></canvas>`
@@ -614,11 +870,11 @@ const labels = [
             return (document.getElementById('monthTitle').innerText = estadoSelected,
             myChartsMonths(dataSc))
         }
-        else if (estado.value === "SP") {
+        else if (estado.value === "SE") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
             myChartsMonths(dataSe))
         }
-        else if (estado.value === "SE") {
+        else if (estado.value === "SP") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
             myChartsMonths(dataSp))
         }
