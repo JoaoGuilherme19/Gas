@@ -252,7 +252,6 @@ const TOarray = []
 for(let i = 0; i < TOprice.length; i++){
     TOarray.push(TOprice[i].valor)
 }
-console.log(TOarray);
 
 //ESTADOS
 
@@ -260,6 +259,7 @@ const ano = document.getElementById('ano');
 const canvas = document.getElementById('canvas');
 const meses = document.getElementById('meses');
 const estado = document.getElementById('estado');
+const minEstados = document.getElementById('minEstado')
 
 const labels = [
     'Janeiro',
@@ -898,6 +898,48 @@ const labels = [
     insertMonths();
     // GRAFICO DOS MESES
 
+    // MIN E MAX ESTADOS
+    const allStates = myJson.estados
+    const allStatesArray = []
+    const allVal = []
+    const allStatesNames = []
+    for(let i = 0; i < allStates.length; i++) {
+        allStatesArray.push(allStates[i].epocas)
+    }
+    for(let i = 0; i < allStates.length; i++) {
+        allStatesNames.push(allStates[i].nome)
+    }
+    for(let i = 0; i < allStatesArray.length; i++) {
+        allVal.push(allStatesArray[i][5].valor)
+    }
+    const max = Math.max(...allVal)
+    const min = Math.min(...allVal)
+
+    console.log(allStatesNames, allVal);
+
+    function compareStatesMax() {
+        for(let i = 0; allVal.length; i++) {
+            if(max == allStatesArray[i][5].valor) {
+                console.log(allStates[i].nome);
+            }
+        }
+    }
+    function compareStatesMin() {
+        for(let i = 0; allVal.length; i++) {
+            if(min == allStatesArray[i][5].valor) {
+                console.log(allStates[i].nome);
+            }
+        }
+    }
+    compareStatesMax()
+    compareStatesMin()
+    
+    
+    
+    
+    
+    // MIN E MAX ESTADOS
+    
     YearsPercent()
     myChartYears()
     ano.addEventListener('change', function (e) {
