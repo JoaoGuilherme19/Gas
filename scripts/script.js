@@ -919,21 +919,21 @@ const labels = [
 
     function compareStatesMax() {
         for(let i = 0; allVal.length; i++) {
-            if(max == allStatesArray[i][5].valor) {
+            if(max == allVal[i]) {
                 console.log(allStates[i].nome);
             }
         }
     }
     function compareStatesMin() {
         for(let i = 0; allVal.length; i++) {
-            if(min == allStatesArray[i][5].valor) {
+            if(min == allVal[i]) {
                 console.log(allStates[i].nome);
             }
         }
     }
+    
     compareStatesMax()
     compareStatesMin()
-    
     
     
     
