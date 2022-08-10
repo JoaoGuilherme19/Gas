@@ -510,6 +510,16 @@ const labels = [
             },datasetNO],
             labels: ['2017', '2018', '2019', '2020', '2021', '2022']
         }
+    const dataPa = {
+        datasets: [{
+            type: 'line',
+            label: 'Pará',
+            data: PAarray,
+            backgroundColor: 'rgb(200, 50, 100)',
+            borderColor: 'rgb(200, 50, 100)'
+            },datasetNO],
+            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+        }
     const dataRo = {
         datasets: [{
             type: 'line',
@@ -540,7 +550,7 @@ const labels = [
             },datasetNO],
             labels: ['2017', '2018', '2019', '2020', '2021', '2022']
         }
-    // NORTE AC AM AP RO RR TO
+    // NORTE AC AM AP PA RO RR TO
 
     // NORDESTE
     const dataAl = {
@@ -784,11 +794,11 @@ const labels = [
         }
         else if (estado.value === "AP") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataAm))
+            myChartsMonths(dataAp))
         }
         else if (estado.value === "AM") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataAp))
+            myChartsMonths(dataAm))
         }
         else if (estado.value === "BA") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
@@ -816,15 +826,15 @@ const labels = [
         }
         else if (estado.value === "MS") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMg))
+            myChartsMonths(dataMs))
         }
         else if (estado.value === "MT") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMs))
+            myChartsMonths(dataMt))
         }
         else if (estado.value === "MG") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMt))
+            myChartsMonths(dataMg))
         }
         else if (estado.value === "PA") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
@@ -836,15 +846,15 @@ const labels = [
         }
         else if (estado.value === "PR") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPe))
+            myChartsMonths(dataPr))
         }
         else if (estado.value === "PE") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPi))
+            myChartsMonths(dataPe))
         }
         else if (estado.value === "PI") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPr))
+            myChartsMonths(dataPi))
         }
         else if (estado.value === "RJ") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
@@ -856,15 +866,15 @@ const labels = [
         }
         else if (estado.value === "RS") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRo))
+            myChartsMonths(dataRs))
         }
         else if (estado.value === "RO") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRr))
+            myChartsMonths(dataRo))
         }
         else if (estado.value === "RR") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRs))
+            myChartsMonths(dataRr))
         }
         else if (estado.value === "SC") {
             return (document.getElementById('monthTitle').innerText = estadoSelected,
