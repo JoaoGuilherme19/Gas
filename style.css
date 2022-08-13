@@ -40,59 +40,17 @@ main {
   color: #999;
 }
 
-.inbox:nth-child(2) {
-  grid-column: 2/4;
-  flex-direction: column;
-}
-
-.inbox:nth-child(2) #yearTitle h1 {
-  text-align: start;
-  font-size: 40px;
-  margin: 5px;
-  color: #2fc2c2;
-}
-
-.inbox:nth-child(2) #yearTitle strong {
-  color: #fff;
-  font-size: 35px;
-}
-
-.inbox:nth-child(2) #canvas {
-  margin: 10px;
-}
-
-.inbox:nth-child(4) {
-  grid-column: 1/3;
-}
-
-.inbox:nth-child(5) {
-  grid-column: 3/4;
-}
-
-.inbox #myChartYears {
-  width: 100%;
-  height: 50%;
-}
-
-.inbox form {
+.inbox .form-group {
   display: flex;
-  flex-direction: column-reverse;
-  gap: 10px;
-  width: 100%;
-}
-
-.inbox form .form-group {
-  display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  gap: 50px;
 }
 
-.inbox form .form-group label, .inbox form .form-group select {
+.inbox .form-group label, .inbox .form-group select {
   margin: 5px;
 }
 
-.inbox form .form-group select {
+.inbox .form-group select {
   outline: none;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -105,9 +63,65 @@ main {
   border-radius: 5px;
 }
 
-.inbox form .form-group select option {
+.inbox .form-group select option {
   background: transparent;
   color: #000;
+}
+
+.inbox .yearsTitles {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+  padding: 5px;
+}
+
+.inbox:nth-child(2) {
+  grid-column: 2/4;
+  flex-direction: column;
+}
+
+.inbox:nth-child(2) #yearTitle h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  font-size: 30px;
+  margin: 5px;
+  color: #2fc2c2;
+  gap: 10px;
+}
+
+.inbox:nth-child(2) #yearTitle strong {
+  color: #fff;
+  font-size: 20px;
+}
+
+.inbox:nth-child(2) .flexYears {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.inbox:nth-child(2) .flexYears .yearsDunut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inbox:nth-child(4) {
+  grid-column: 1/3;
+}
+
+.inbox:nth-child(5) {
+  grid-column: 3/4;
+}
+
+.inbox form {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  width: 100%;
 }
 
 .container {
