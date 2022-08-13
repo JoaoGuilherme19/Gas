@@ -1,10 +1,20 @@
 import myJson from './gas.json' assert {type: 'json'}
 
+const ano = document.getElementById('ano');
+const canvas = document.getElementById('canvas');
+const meses = document.getElementById('meses');
+const estado = document.getElementById('estado');
+const minEstados = document.getElementById('minEstados')
+const yearsDunut = document.getElementById('yearsDunut')
+const horas = document.getElementById('horas');
+
 $(window).on('load', function () {
         $('#preloader .inner').delay(1000).fadeOut();
         $('#preloader').delay(1000).fadeOut('slow'); 
         $('body').delay(1000).css({'overflow': 'visible'});
       })
+
+
 
 function AvgPrice(myArray) {
     var i = 0, sum = 0, ArrayLen = myArray.length;
@@ -15,8 +25,8 @@ function AvgPrice(myArray) {
 }
 
 //FIRST YEAR
-const firstYear = myJson.AvrgGas[0].year;
 const firstYearMonths = myJson.AvrgGas[0].months;
+const firstYear = myJson.AvrgGas[0].year;
 const firstYearPrices = []
 for (let i = 0; i < firstYearMonths.length; i++) {
     firstYearPrices.push(Number(firstYearMonths[i].price))
@@ -86,6 +96,26 @@ function YearsPercent() {
 }
 
 //SIXTH YEAR
+
+
+function getTime() {
+    function zero(x) {
+    if (x < 10) {
+            x = '0' + x;
+        } return x;
+    }
+    const date = new Date();
+    var hour = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+
+    minutes = zero(minutes);
+    seconds = zero(seconds);
+
+    horas.innerHTML = `<p>${hour}:${minutes}:${seconds}</p>`
+}
+
+setInterval(getTime, 1000)
 
 // REGIOES
 
@@ -267,12 +297,7 @@ const dataStatesArray = [
 
 //ESTADOS
 
-const ano = document.getElementById('ano');
-const canvas = document.getElementById('canvas');
-const meses = document.getElementById('meses');
-const estado = document.getElementById('estado');
-const minEstados = document.getElementById('minEstados')
-const yearsDunut = document.getElementById('yearsDunut')
+
 
 const labels = [
     'Janeiro',
