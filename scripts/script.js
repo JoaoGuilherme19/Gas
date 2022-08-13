@@ -1,5 +1,11 @@
 import myJson from './gas.json' assert {type: 'json'}
 
+$(window).on('load', function () {
+        $('#preloader .inner').delay(1000).fadeOut();
+        $('#preloader').delay(1000).fadeOut('slow'); 
+        $('body').delay(1000).css({'overflow': 'visible'});
+      })
+
 function AvgPrice(myArray) {
     var i = 0, sum = 0, ArrayLen = myArray.length;
     while(i < ArrayLen) {
