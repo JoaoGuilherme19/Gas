@@ -1040,5 +1040,31 @@
             "valor": 7.05
         }]
     }
-    ]
+    ],
+    "direcoes":[{
+        "direcao":{
+            "nome":"Norte",
+            "estados":["Acre","Amazonas","Amapá","Pará","Rondônia","Roraima","Tocantins"]
+        }
+    },{
+        "direcao":{
+            "nome":"Nordeste",
+            "estados":["Alagoas","Bahia","Ceará","Maranhão","Paraíba","Pernambuco","Piauí","Rio Grande do Norte","São Paulo","Sergipe","Tocantins"]
+        }
+    },{
+        "direcao":{
+            "nome":"Centro-Oeste",
+            "estados":["Distrito Federal","Goiás","Mato Grosso","Mato Grosso do Sul"]
+        }
+    },{
+        "direcao":{
+            "nome":"Sudeste",
+            "estados": ["Espírito Santo","Minas Gerais","Rio de Janeiro","São Paulo"]
+        }
+    },{
+        "direcao":{
+            "nome":"Sul",
+            "estados": ["Santa Catarina","Paraná","Rio Grande do Sul"]
+        }
+    }]
 }

@@ -114,7 +114,6 @@ for (let i = 0; i < SUvalor.length; i++) {
 
 // REGIOES
 
-
 //ESTADOS
 
 const ACprice = myJson.estados[0].epocas
@@ -253,13 +252,21 @@ for(let i = 0; i < TOprice.length; i++){
     TOarray.push(TOprice[i].valor)
 }
 
+const dataStatesArray = [
+    ACarray, ALarray, AParray, AMarray, BAarray, 
+    CEarray, DFarray, ESarray, GOarray, MGarray, MSarray, MTarray, 
+    PAarray, MAarray, PBarray, PRarray, PEarray, PIarray, RJarray, 
+    RNarray, RSarray, ROarray, RRarray, SCarray, SParray, SEarray, 
+    TOarray]
+
 //ESTADOS
 
 const ano = document.getElementById('ano');
 const canvas = document.getElementById('canvas');
 const meses = document.getElementById('meses');
 const estado = document.getElementById('estado');
-const minEstados = document.getElementById('minEstado')
+const minEstados = document.getElementById('minEstados')
+const yearsDunut = document.getElementById('yearsDunut')
 
 const labels = [
     'Janeiro',
@@ -276,71 +283,27 @@ const labels = [
     'Dezembro'
   ];
   
-    const dataFirst = {
+  function dataSetYears(data, color, borderColor) {
+    const dataset = {
       labels: labels,
       datasets: [{
           label: "R$/litro da Gasolina",
-          backgroundColor: 'rgb(255, 00, 132)',
-          borderColor: 'rgb(255, 00, 132)',
-          data: firstYearPrices,
+          backgroundColor: color,
+          borderColor: borderColor,
+          data: data,
+          fill: true,
+          pointBorderWidth: 1,
+          borderWidth: 1
         }]
-    };
-
-    const dataSecond = {
-        labels: labels,
-        datasets: [{
-            label: "R$/litro da Gasolina",
-            backgroundColor: 'rgb(243, 220, 68)',
-            borderColor: 'rgb(243, 220, 68)',
-            data: secondYearPrices,
-            }]
-    };
-
-    const dataThird = {
-        labels: labels,
-        datasets: [{
-            label: "R$/litro da Gasolina",
-            backgroundColor: 'rgb(00, 255, 132)',
-            borderColor: 'rgb(00, 255, 132)',
-            data: thirdYearPrices
-            }]
-    };
-
-    const dataFourth = {
-        labels: labels,
-        datasets: [{
-            label: "R$/litro da Gasolina",
-            backgroundColor: 'rgb(14, 162, 235)',
-            borderColor: 'rgb(14, 162, 235)',
-            data: fourthYearPrices,
-            }]
-    };
-
-    const dataFifth = {
-        labels: labels,
-        datasets: [{
-            label: "R$/litro da Gasolina",
-            backgroundColor: 'rgb(255, 100, 86)',
-            borderColor: 'rgb(255, 100, 86)',
-            data: fifthYearPrices,
-        }]
-    };
-
-    const dataSixth = {
-        labels: labels,
-        datasets: [{
-            label: "R$/litro da Gasolina",
-            backgroundColor: 'rgb(75, 192, 192)',
-            borderColor: 'rgb(75, 192, 192)',
-            data: sixthYearPrices,
-            }]
-    };
+    }
+    return dataset
+  }
     
-    const myChart = (data) => {
-    canvas.innerHTML = `<canvas id="myChart" width="400" height="150"></canvas>`
+    const myChart = (data, color, borderColor) => {
+    canvas.innerHTML = `<canvas id="myChart" height="250" width="450"></canvas>`
     const config = {
         type: 'line',
-        data: data,
+        data: dataSetYears(data, color, borderColor),
         options: {
             interaction: {
               intersect: false,
@@ -357,38 +320,36 @@ const labels = [
     function insertDates() {
         if (ano.value === "2017") {
             return (
-                myChart(dataFirst),
+                myChart(firstYearPrices, 'rgb(255, 00, 132, 0.60)', 'rgb(255, 00, 132)'),
                 document.getElementById('yearTitle').innerHTML = `<h1>${firstYear}<strong> - R$ ${firstYearPrice} / Preço médio do ano</strong></h1>`)
         }
         else if (ano.value === "2018") {
             return (
-                myChart(dataSecond),
+                myChart(secondYearPrices, 'rgb(243, 220, 68, 0.60)', 'rgb(243, 220, 68)'),
                 document.getElementById('yearTitle').innerHTML = `<h1>${secondYear}<strong> - R$ ${secondYearPrice} / Preço médio do ano</strong></h1>`)
         }
         else if (ano.value === "2019") {
             return(
-                myChart(dataThird),
+                myChart(thirdYearPrices, 'rgb(00, 255, 132, 0.60)', 'rgb(00, 255, 132)'),
                 document.getElementById('yearTitle').innerHTML = `<h1>${thirdYear}<strong> - R$ ${thirdYearPrice} / Preço médio do ano</strong></h1>`)
         }
         else if (ano.value === "2020") {
             return (
-                myChart(dataFourth),
+                myChart(fourthYearPrices, 'rgb(14, 162, 235, 0.60)', 'rgb(14, 162, 235)'),
                 document.getElementById('yearTitle').innerHTML = `<h1>${fourthYear}<strong> - R$ ${fourthYearPrice} / Preço médio do ano</strong></h1>`)
         }
         else if (ano.value === "2021") {
             return (
-                myChart(dataFifth),
+                myChart(fifthYearPrices, 'rgb(255, 100, 86, 0.60)', 'rgb(255, 100, 86)'),
                 document.getElementById('yearTitle').innerHTML = `<h1>${fifthYear}<strong> - R$ ${fifthYearPrice} / Preço médio do ano</strong></h1>`)
         }
         else if (ano.value === "2022") {
             return (
-                myChart(dataSixth),
+                myChart(sixthYearPrices, 'rgb(75, 192, 192, 0.60)', 'rgb(75, 192, 192)'),
                 document.getElementById('yearTitle').innerHTML = `<h1>${sixthYear}<strong> - R$ ${sixthYearPrice} / Preço médio do ano</strong></h1>`)
         }
     
     }
-    insertDates();
-
     
     // GRAFICO DOS ANOS
 
@@ -428,6 +389,7 @@ const labels = [
     }
 
     const myChartYears = () => {
+        yearsDunut.innerHTML = `<canvas id="myChartYears" width="220"></canvas>`
         new Chart(
         document.getElementById('myChartYears'),
         configYears
@@ -435,332 +397,42 @@ const labels = [
 
     // GRAFICO DOS ANOS
 
-
-
     // GRAFICO DOS MESES
     
     // REGIOES
 
-    const datasetNO = {
+    function setWindDirection(label, data, color, borderColor) {
+        const dataset = {
         type: 'line',
-        label: 'Norte',
-        data: NOarray,
-        backgroundColor: 'rgb(200, 55, 255)',
-        borderColor: 'rgb(200, 55, 255)'
-    }
-    const datasetNE = {
-        type: 'line',
-        label: 'Nordeste',
-        data: NEarray,
-        backgroundColor: 'rgb(255, 125, 50)',
-        borderColor: 'rgb(255, 125, 50)'
-    }
-    const datasetCO = {
-        type: 'line',
-        label: 'Centro-Oeste',
-        data: COarray,
-        backgroundColor: 'rgb(50, 100, 50)',
-        borderColor: 'rgb(50, 100, 50)'
-    }
-    const datasetSE = {
-        type: 'line',
-        label: 'Sudeste',
-        data: SDarray,
-        backgroundColor: 'rgb(0, 255, 0)',
-        borderColor: 'rgb(0, 255, 0)'
-    }
-    const datasetSU = {
-        type: 'line',
-        label: 'Sul',
-        data: SUarray,
-        backgroundColor: 'rgb(50, 100, 200)',
-        borderColor: 'rgb(50, 100, 200)'
+        label: label,
+        data: data,
+        backgroundColor: color,
+        borderColor: borderColor,
+        fill: true,
+        pointBorderWidth: 1,
+        borderWidth: 2
+        }
+        return dataset
     }
 
     // REGIOES
   
-    // NORTE
-    const dataAc = {
-        datasets: [{
-            type: 'line',
-            label: 'Acre',
-            data: ACarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-          },datasetNO],
-          labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+    function dataStates(data, label, dataLocale) {
+       const config = {
+                datasets: [{
+                    type: 'line',
+                    label: label,
+                    data: data,
+                    backgroundColor: 'rgb(200, 50, 100, 0.2)',
+                    borderColor: 'rgb(200, 50, 100)',
+                    fill: true,
+                    pointBorderWidth: 1,
+                    borderWidth: 2
+                },dataLocale],
+                labels: ['2017', '2018', '2019', '2020', '2021', '2022']
+            }
+        return config
     }
-    const dataAm = {
-        datasets: [{
-            type: 'line',
-            label: 'Amazonas',
-            data: AMarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-        }
-    const dataAp = {
-        datasets: [{
-            type: 'line',
-            label: 'Amapá',
-            data: AParray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-        }
-    const dataPa = {
-        datasets: [{
-            type: 'line',
-            label: 'Pará',
-            data: PAarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-        }
-    const dataRo = {
-        datasets: [{
-            type: 'line',
-            label: 'Rondônia',
-            data: ROarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataRr = {
-        datasets: [{
-            type: 'line',
-            label: 'Roraima',
-            data: RRarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataTo = {
-        datasets: [{
-            type: 'line',
-            label: 'Tocantins',
-            data: TOarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-        }
-    // NORTE AC AM AP PA RO RR TO
-
-    // NORDESTE
-    const dataAl = {
-        datasets: [{
-            type:'line',
-            label: 'Alagoas',
-            data: ALarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-        }
-    const dataBa = {
-        datasets: [{
-            type: 'line',
-            label: 'Bahia',
-            data: BAarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataCe = {
-        datasets: [{
-            type: 'line',
-            label: 'Ceará',
-            data: CEarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataMa = {
-        datasets: [{
-            type: 'line',
-            label: 'Maranhão',
-            data: MAarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataPe = {
-        datasets: [{
-            type: 'line',
-            label: 'Pernambuco',
-            data: PEarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataPb = {
-        datasets: [{
-            type: 'line',
-            label: 'Paraíba',
-            data: PBarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataPi = {
-        datasets: [{
-            type: 'line',
-            label: 'Piauí',
-            data: PIarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataRn = {
-        datasets: [{
-            type: 'line',
-            label: 'Rio Grande do Norte',
-            data: RNarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataSe = {
-        datasets: [{
-            type: 'line',
-            label: 'Sergipe',
-            data: SEarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetNE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    // NORDESTE AL BA CE MA PB PE PI RN SE
-
-    // CENTRO OESTE
-    const dataDf = {
-        datasets: [{
-            type: 'line',
-            label: 'Distrito Federal',
-            data: DFarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetCO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataGo = {
-        datasets: [{
-            type: 'line',
-            label: 'Goiás',
-            data: GOarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetCO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataMt = {
-        datasets: [{
-            type: 'line',
-            label: 'Mato Grosso',
-            data: MTarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetCO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataMs = {
-        datasets: [{
-            type: 'line',
-            label: 'Mato Grosso do Sul',
-            data: MSarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetCO],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    // CENTRO OESTE GO MT MS DF
-    // SUDESTE
-    const dataEs = {
-        datasets: [{
-            type: 'line',
-            label: 'Espírito Santo',
-            data: ESarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataMg = {
-        datasets: [{
-            type: 'line',
-            label: 'Minas Gerais',
-            data: MGarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataRj = {
-        datasets: [{
-            type: 'line',
-            label: 'Rio de Janeiro',
-            data: RJarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataSp = {
-        datasets: [{
-            type: 'line',
-            label: 'São Paulo',
-            data: SParray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSE],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    // SUDESTE ES MG RJ SP
-    // SUL 
-    const dataSc = {
-        datasets: [{
-            type: 'line',
-            label: 'Santa Catarina',
-            data: SCarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSU],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataPr = {
-        datasets: [{
-            type: 'line',
-            label: 'Paraná',
-            data: PRarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSU],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    const dataRs = {
-        datasets: [{
-            type: 'line',
-            label: 'Rio Grande do Sul',
-            data: RSarray,
-            backgroundColor: 'rgb(200, 50, 100)',
-            borderColor: 'rgb(200, 50, 100)'
-            },datasetSU],
-            labels: ['2017', '2018', '2019', '2020', '2021', '2022']
-    }
-    // SUL SC PR RS
 
     const myChartsMonths = (data) => {
         meses.innerHTML = `<canvas id="myChartsMonths" height="150" width="400"></canvas>`
@@ -781,133 +453,45 @@ const labels = [
 
     function insertMonths() {
         const estadoSelected = estado.options[estado.selectedIndex].text
-        if (estado.value === "AC") {
-            return (
-            myChartsMonths(dataAc),
-            document.getElementById('monthTitle').innerText = estadoSelected
-            )
-        }
-        else if (estado.value === "AL") {
-            return (myChartsMonths(dataAl),
-            document.getElementById('monthTitle').innerText = estadoSelected
-            )
-        }
-        else if (estado.value === "AP") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataAp))
-        }
-        else if (estado.value === "AM") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataAm))
-        }
-        else if (estado.value === "BA") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataBa))
-        }
-        else if (estado.value === "CE") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataCe))
-        }
-        else if (estado.value === "DF") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataDf))
-        }
-        else if (estado.value === "ES") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataEs))
-        }
-        else if (estado.value === "GO") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataGo))
-        }
-        else if (estado.value === "MA") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMa))
-        }
-        else if (estado.value === "MS") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMs))
-        }
-        else if (estado.value === "MT") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMt))
-        }
-        else if (estado.value === "MG") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataMg))
-        }
-        else if (estado.value === "PA") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPa))
-        }
-        else if (estado.value === "PB") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPb))
-        }
-        else if (estado.value === "PR") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPr))
-        }
-        else if (estado.value === "PE") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPe))
-        }
-        else if (estado.value === "PI") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataPi))
-        }
-        else if (estado.value === "RJ") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRj))
-        }
-        else if (estado.value === "RN") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRn))
-        }
-        else if (estado.value === "RS") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRs))
-        }
-        else if (estado.value === "RO") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRo))
-        }
-        else if (estado.value === "RR") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataRr))
-        }
-        else if (estado.value === "SC") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataSc))
-        }
-        else if (estado.value === "SE") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataSe))
-        }
-        else if (estado.value === "SP") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataSp))
-        }
-        else if (estado.value === "TO") {
-            return (document.getElementById('monthTitle').innerText = estadoSelected,
-            myChartsMonths(dataTo))
+        const dataDirecoes = myJson.direcoes
+
+        const localeWind = () => {for (let i = 0; i < dataDirecoes.length; i++) {
+                if(dataDirecoes[i].direcao.estados.includes(estadoSelected)) {
+                    if (dataDirecoes[i].direcao.nome == 'Norte') {
+                        return setWindDirection('Norte', NOarray, 'rgb(200, 55, 255, 0.2)' , 'rgb(200, 55, 255)')
+                    } else if (dataDirecoes[i].direcao.nome == 'Nordeste') {
+                        return setWindDirection('Nordeste', NEarray, 'rgb(255, 125, 50, 0.2)', 'rgb(255, 125, 50)')
+                    } else if (dataDirecoes[i].direcao.nome == 'Centro-Oeste') {
+                        return setWindDirection('Centro-Oeste', COarray, 'rgb(50, 100, 50, 0.2)', 'rgb(50, 100, 50)')
+                    } else if (dataDirecoes[i].direcao.nome == 'Sudeste') {
+                        return setWindDirection('Sudeste', SDarray, 'rgb(0, 255, 0, 0.2)', 'rgb(0, 255, 0)')
+                    } else if (dataDirecoes[i].direcao.nome == 'Sul') {
+                        return setWindDirection('Sul', SUarray, 'rgb(50, 100, 200, 0.2)', 'rgb(50, 100, 200)')
+                    }
+                }
+            }
         }
 
-
+        for(let i = 0; i < estado.length; i++) {
+            if(estado[i].value == estadoSelected) {
+                    myChartsMonths(dataStates(dataStatesArray[i], estadoSelected, localeWind()))
+                    document.getElementById('monthTitle').innerText = estadoSelected
+                }
+            }
     }
-    insertMonths();
+    
     // GRAFICO DOS MESES
-
+ 
     // MIN E MAX ESTADOS
     const allStates = myJson.estados
     const allStatesArray = []
     const allVal = []
     const allStatesNames = []
     for(let i = 0; i < allStates.length; i++) {
-        allStatesArray.push(allStates[i].epocas)
+        allStatesArray.push(myJson.estados[i].epocas)
     }
     for(let i = 0; i < allStates.length; i++) {
-        allStatesNames.push(allStates[i].nome)
+        allStatesNames.push(myJson.estados[i].nome)
     }
     for(let i = 0; i < allStatesArray.length; i++) {
         allVal.push(allStatesArray[i][5].valor)
@@ -918,30 +502,27 @@ const labels = [
     console.log(allStatesNames, allVal);
 
     function compareStatesMax() {
-        for(let i = 0; allVal.length; i++) {
+        for(let i = 0; i < allVal.length; i++) {
             if(max == allVal[i]) {
-                console.log(allStates[i].nome);
+                minEstados.innerHTML = allStates[i].nome;
             }
         }
     }
     function compareStatesMin() {
-        for(let i = 0; allVal.length; i++) {
+        for(let i = 0; i < allVal.length; i++) {
             if(min == allVal[i]) {
-                console.log(allStates[i].nome);
+                minEstados.append(allStates[i].nome);
             }
         }
     }
-    
-    compareStatesMax()
-    compareStatesMin()
-    
-    
-    
-    
+     
     // MIN E MAX ESTADOS
-    
+    insertDates();
     YearsPercent()
     myChartYears()
+    insertMonths();
+    compareStatesMax()
+    compareStatesMin() 
     ano.addEventListener('change', function (e) {
       e.preventDefault();
       insertDates();
@@ -949,7 +530,7 @@ const labels = [
     estado.addEventListener('change', function (e) {
       e.preventDefault();
       insertMonths();
-    })
+    }) 
 
 
 
