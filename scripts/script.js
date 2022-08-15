@@ -5,6 +5,7 @@ const canvas = document.getElementById('canvas');
 const meses = document.getElementById('meses');
 const estado = document.getElementById('estado');
 const minEstados = document.getElementById('minEstados')
+const maxEstados = document.getElementById('maxEstados')
 const yearsDunut = document.getElementById('yearsDunut')
 const horas = document.getElementById('horas');
 
@@ -527,27 +528,48 @@ const labels = [
     for(let i = 0; i < allStatesArray.length; i++) {
         allVal.push(allStatesArray[i][5].valor)
     }
-    const max = Math.max(...allVal)
     const min = Math.min(...allVal)
+    const max = Math.max(...allVal)
 
     console.log(allStatesNames, allVal);
 
-    function compareStatesMax() {
-        for(let i = 0; i < allVal.length; i++) {
-            if(max == allVal[i]) {
-                minEstados.innerHTML = allStates[i].nome;
-            }
-        }
-    }
     function compareStatesMin() {
         for(let i = 0; i < allVal.length; i++) {
             if(min == allVal[i]) {
-                minEstados.append(allStates[i].nome);
+                const startPrice = allStates[i].epocas[0].valor
+                const endPrice = allStates[i].epocas[5].valor
+                const price = endPrice - startPrice
+                const percentage = ( startPrice / endPrice) * 100
+                
+                minEstados.innerText = allStates[i].nome + ` - R$ ${endPrice}`;
+                document.getElementById('stateMinPercentage').innerHTML = `
+                <span class="material-symbols-outlined">
+                change_history
+                </span>
+                <h1>R$ ${price.toFixed(2)} - ${percentage.toFixed(2)}%</h1>`
+            }
+        }
+    }
+    function compareStatesMax() {
+        for(let i = 0; i < allVal.length; i++) {
+            if(max == allVal[i]) {
+                const startPrice = allStates[i].epocas[0].valor
+                const endPrice = allStates[i].epocas[5].valor
+                const price = endPrice - startPrice
+                const percentage = ( startPrice / endPrice) * 100
+                
+                maxEstados.innerText = allStates[i].nome + ` - R$ ${endPrice}`;
+                document.getElementById('stateMaxPercentage').innerHTML = `
+                <span class="material-symbols-outlined">
+                change_history
+                </span>
+                <h1>R$ ${price.toFixed(2)} - ${percentage.toFixed(2)}%</h1>`
             }
         }
     }
      
     // MIN E MAX ESTADOS
+   
     insertDates();
     YearsPercent()
     myChartYears()

@@ -124,11 +124,32 @@ main {
 }
 
 .inbox:nth-child(5) {
-  grid-column: 4/5;
+  grid-column: 4/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.inbox:nth-child(6) {
-  grid-column: 5/7;
+.inbox:nth-child(5) p, .inbox:nth-child(5) h1 {
+  text-align: center;
+}
+
+.inbox:nth-child(5) p {
+  font-size: 15px;
+}
+
+.inbox:nth-child(5) .minEstados h1, .inbox:nth-child(5) .maxEstados h1 {
+  color: #bbb;
+  font-size: 25px;
+}
+
+.inbox:nth-child(5) .porcentagemDiv {
+  display: flex;
+  align-items: center;
+}
+
+.inbox:nth-child(5) .porcentagemDiv h1, .inbox:nth-child(5) .porcentagemDiv span {
+  color: #3fb33f;
 }
 
 .container {
