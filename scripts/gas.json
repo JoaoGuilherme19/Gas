@@ -302,27 +302,27 @@
                 },
                 {
                     "month": "Jul",
-                    "price": 7.21
+                    "price": ""
                 },
                 {
                     "month": "Aug",
-                    "price": 7.21
+                    "price": ""
                 },
                 {
                     "month": "Sep",
-                    "price": 7.21
+                    "price": ""
                 },
                 {
                     "month": "Oct",
-                    "price": 7.21
+                    "price": ""
                 },
                 {
                     "month": "Nov",
-                    "price": 7.21
+                    "price": ""
                 },
                 {
                     "month": "Dec",
-                    "price": 7.21
+                    "price": ""
                 }
             ]
         }
@@ -1041,7 +1041,8 @@
         }]
     }
     ],
-    "direcoes":[{
+    "direcoes":[
+        {
         "direcao":{
             "nome":"Norte",
             "estados":["Acre","Amazonas","Amapá","Pará","Rondônia","Roraima","Tocantins"]

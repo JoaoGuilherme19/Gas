@@ -110,6 +110,7 @@ function getTime() {
     var minutes = date.getMinutes();
     var seconds = date.getSeconds();
 
+    hour = zero(hour);
     minutes = zero(minutes);
     seconds = zero(seconds);
 
