@@ -1,4 +1,4 @@
-# Dados sobre a Gasolina nos últimos 5 anos
+# Dados sobre a Gasolina nos últimos 6 anos
 
 Organizei alguns dados para poder estudar mais sobre JSON, JS e Gráficos no HTML
 
